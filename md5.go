@@ -2,8 +2,8 @@ package benchmark
 
 import (
 	"crypto/md5"
-	"fmt"
 	"encoding/hex"
+	"fmt"
 )
 
 func md51() string {
