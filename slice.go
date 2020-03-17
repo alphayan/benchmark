@@ -1,7 +1,7 @@
 package benchmark
 
 func slice1() []int {
-	m := []int{}
+	m := make([]int, 1000)
 	for i := 0; i < 1000; i++ {
 		m = append(m, i)
 	}

@@ -22,19 +22,19 @@ func channel1() []int {
 			close(ch)
 		}
 	}
-	return a[:]
+	return a
 }
 
 func sync2() []int {
 	a := []int{}
-	var sw = new(sync.WaitGroup)
+	var sw = sync.WaitGroup{}
 	sw.Add(100)
 	for i := 0; i < 100; i++ {
-		go func(i int) {
+		go func(i int, sw *sync.WaitGroup) {
 			a = append(a, i)
 			sw.Done()
-		}(i)
+		}(i, &sw)
 	}
 	sw.Wait()
-	return a[:]
+	return a
 }
