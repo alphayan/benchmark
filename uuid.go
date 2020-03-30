@@ -3,7 +3,7 @@ package benchmark
 import (
 	"github.com/bwmarrin/snowflake"
 	uuid2 "github.com/google/uuid"
-	"github.com/satori/go.uuid"
+	uuid "github.com/satori/go.uuid"
 )
 
 // go.uuid.v1

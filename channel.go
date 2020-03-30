@@ -27,7 +27,7 @@ func channel1() []int {
 
 func sync2() []int {
 	a := []int{}
-	var sw = sync.WaitGroup{}
+	var sw sync.WaitGroup
 	sw.Add(100)
 	for i := 0; i < 100; i++ {
 		go func(i int, sw *sync.WaitGroup) {

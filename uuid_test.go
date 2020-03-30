@@ -24,7 +24,7 @@ func BenchmarkUuid3(b *testing.B) {
 		uuid3()
 	}
 }
-func BenchmarkUuid4(b *testing.B) {
+func BenchmarkGUuid(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		guuid()
 	}
