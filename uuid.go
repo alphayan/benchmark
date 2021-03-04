@@ -19,7 +19,7 @@ func uuidv4() string {
 // snowflake
 func uuid3() string {
 	// Create a new Node with a Node number of 1
-	node, _ := snowflake.NewNode(1023)
+	node, _ := snowflake.NewNode(0)
 	// Generate a snowflake ID.
 	return node.Generate().String()
 }
